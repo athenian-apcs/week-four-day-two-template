@@ -1,85 +1,95 @@
+import java.util.Arrays;
+
 public class MyMain {
-    // Warm-up: Returns true if the char is a lowercase
-    // letter or uppercase letter
-    // Recall that you can compare chars with operators like < and >=
-    // Ex. isLetter('a') => true
-    //     isLetter('C') => true
-    //     isLetter('?') => false
-    //     isLetter('4') => false
-    public static boolean isLetter(char c) {
-        // REPLACE WITH YOUR CODE HERE
-        return false;
+    // Arrays Basics Problem 1:
+    // Write a method addArrays3() that takes two int arrays of size 3 as input,
+    // and outputs an int array of size 3 that is the "sum" of the two arrays
+    // (i.e. the first element in our outputted array is the sum of the first
+    // elements in the two input arrays, and so on).
+    // Example:
+    //    int[] arr1 = {1, 3, 5};
+    //    int[] arr2 = {2, 4, 6};
+    //    int[] arr3 = addArrays3(arr1, arr2); // arr3 = [3, 7, 11]
+    public static int[] addArrays3(int[] arr1, int[] arr2) {
+        // REPLACE THIS WITH YOUR CODE
+        return null;
     }
 
-    // This method is given two chars as input, c1 and c2
-    // The method should print out the chars between c1 and c2
-    // You can assume that c2 will always come after c1
-    // Ex. printChars('b', 'g') => 'b'
-    //                             'c'
-    //                             'd'
-    //                             'e'
-    //                             'f'
-    //                             'g'
-    public static void printChars(char c1, char c2) {
-        // REPLACE WITH YOUR CODE HERE
+    // Arrays Basics Problem 2:
+    // Next, write a method average3() that takes an int array of size 3 as input,
+    // and outputs a double array of size 3, where each element of that array is
+    // equal to the average of the values in the inputted array.
+    // Example:
+    // int[] arr1 = {1, 3, 5};
+    // double[] arr2 = average3(arr1); // arr2 = [3.0, 3.0, 3.0]
+    public static double[] average3(int[] arr) {
+        // REPLACE THIS WITH YOUR CODE
+        return null;
     }
 
-    // Given a char ch, and returns the next letter in the alphabet.
-    // The letters 'z' and 'Z' should "roll over" to 'a' and 'A', respectively
-    // At first, you should focus on just uppercase letters, but you should get your code
-    // to work with lowercase letters as well.
-    // You can assume that this method will only ever be called with letter chars
-    // Ex. nextLetter('J') => 'K'
-    //     nextLetter('Z') => 'A'
-    //     nextLetter('a') => 'b'
-    //     nextLetter('z') => 'a'
-    public static char nextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
-        return ' ';
+    // Iteration Problem 1:
+    // Write a method sum() that takes an int array of any size as input,
+    // and outputs the sum of all of the values in the array.
+    // Example:
+    // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
+    // int x = sum(nums); // x = 40
+    public static int sum(int[] arr) {
+        // REPLACE THIS WITH YOUR CODE
+        return -1;
     }
 
-    // Similar to the previous example, the method is given a char ch. However, the method
-    // returns the letter 3 after the current letter
-    // The letters 'x', 'y', and 'z' should "roll over" to 'a', 'b', and 'c', respectively
-    // Ex. nextNextNextLetter('J') => 'M'
-    //     nextNextNextLetter('Z') => 'C'
-    //     nextNextNextLetter('a') => 'd'
-    //     nextNextNextLetter('z') => 'c'
-    public static char nextNextNextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
-        return ' ';
+    // Iteration Problem 2:
+    // Next, write a method max() that takes an int array of any size as input,
+    // and outputs the largest number in the array
+    // Example:
+    // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
+    // int x = max(nums); // x = 9
+    public static int max(int[] arr) {
+        // REPLACE THIS WITH YOUR CODE
+        return -1;
+    }
+
+    // Challenge Problem:
+    // Write a method makeRandomArray() outputs an int array of random numbers.
+    // The method takes three inputs: the first input corresponds to the desired
+    // size of the array, the second input is the smallest number that may be generated
+    // and the last input is the largest number that may be generated (inclusive)
+    // Example:
+    // makeRandomArray(10, 1, 5) => [4, 2, 3, 1, 5, 3, 4, 4, 1, 2]
+    public static int[] makeRandomArray(int size, int lowest, int biggest) {
+        // REPLACE THIS WITH YOUR CODE
+        return null;
     }
 
 
     public static void main(String[] args) {
-        System.out.println("isLetter Tests:");
-        System.out.println(isLetter('a')); // true
-        System.out.println(isLetter('C')); // true
-        System.out.println(isLetter('?')); // false
-        System.out.println(isLetter('4')); // false
+        System.out.println("addArrays3 Tests:");
+        int[] z = addArrays3(new int[] {-1, 6, 3}, new int[] {7, -6, 12} );
+        System.out.println(Arrays.toString(z)); // [6, 0, 15]
 
         System.out.println();
-        System.out.println("printChars Tests:");
-        printChars('b', 'g');
-        // 'b'
-        // 'c'
-        // 'd'
-        // 'e'
-        // 'f'
-        // 'g'
+        System.out.println("average3 Tests:");
+        double[] x = average3(new int[] {2, 4, 6});
+        System.out.println(Arrays.toString(x)); // [4.0, 4.0, 4.0]
+
+        double[] y = average3(new int[] {7, 3, 21});
+        System.out.println(Arrays.toString(y)); // [10.333333333333334, 10.333333333333334, 10.333333333333334]
 
         System.out.println();
-        System.out.println("nextLetter Tests:");
-        System.out.println(nextLetter('J')); // 'K'
-        System.out.println(nextLetter('Z')); // 'A'
-        System.out.println(nextLetter('a')); // 'b'
-        System.out.println(nextLetter('z')); // 'a'
+        System.out.println("sum Tests:");
+        int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
+        int[] nums2 = {-1, -6, -2, -6, -8, -2, -3, -9, -3};
+        System.out.println(sum(nums)); // 40
+        System.out.println(sum(nums2)); // -40
 
         System.out.println();
-        System.out.println("nextNextNextLetter Tests:");
-        System.out.println(nextNextNextLetter('J')); // 'M'
-        System.out.println(nextNextNextLetter('Z')); // 'C'
-        System.out.println(nextNextNextLetter('a')); // 'd'
-        System.out.println(nextNextNextLetter('z')); // 'c'
+        System.out.println("max Tests:");
+        System.out.println(max(nums)); // 9
+        System.out.println(max(nums2)); // -1
+
+        System.out.println();
+        System.out.println("makeRandomArray Tests:");
+        System.out.println(Arrays.toString(makeRandomArray(10, 1, 5)));
+        // random, but could be: [4, 2, 3, 1, 5, 3, 4, 4, 1, 2]
     }
 }
